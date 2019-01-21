@@ -28,36 +28,41 @@
     </files>
 
     <config>
-        <fields name="params">
-            <fieldset name="basic">
-                <field
-                    name="thing"
-                    type="text"
-                    label="MOD_LOADARTICLE_THING_LABEL"
-                    description="MOD_LOADARTICLE_THING_DESC"
-                    default=""
-                    required="true"
-                />
-            </fieldset>
-            <fieldset name="advanced">
-                <field
-                    name="adv_thing"
-                    type="text"
-                    label="MOD_LOADARTICLE_ADV_THING_LABEL"
-                    description="MOD_LOADARTICLE_ADV_THING_DESC"
-                    default=""
-                />
-            </fieldset>
-            <fieldset name="custom_fieldset">
-                <field
-                    name="c1_thing"
-                    type="text"
-                    label="MOD_LOADARTICLE_CUSTOM_THING_LABEL"
-                    description="MOD_LOADARTICLE_CUSTOM_THING_DESC"
-                    default=""
-                />
-            </fieldset>
-        </fields>
-    </config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="alias"
+					type="text"
+					label="MOD_LOADARTICLE_ALIAS_LABEL"
+					description="MOD_LOADARTICLE_ALIAS_DESC"
+					default=""
+					required="true"
+				/>
+				<field
+					name="path"
+					type="text"
+					label="MOD_LOADARTICLE_PATH_LABEL"
+					description="MOD_LOADARTICLE_PATH_DESC"
+					default=""
+					required="true"
+				/>
+				<field
+					name="title"
+					type="text"
+					label="MOD_LOADARTICLE_TITLE_LABEL"
+					description="MOD_LOADARTICLE_TITLE_DESC"
+					default=""
+				/>
+				<field
+					name="pagetitle"
+					type="checkbox"
+					label="MOD_LOADARTICLE_PAGETITLE_LABEL"
+					description="MOD_LOADARTICLE_PAGETITLE_DESC"
+					default="0"
+					value="1"
+				/>
+			</fieldset>
+		</fields>
+	</config>
 
 </extension>
