@@ -14,9 +14,9 @@ $doc = JFactory::getDocument();
 
 ?>
 <article>
-<?php if ($params->get('pagetitle')): ?>
+<?php if ($params->get('pagetitle') && !$params->get('hidetitle')): ?>
 <h1><?php echo $doc->title; ?></h1>
-<?php else: ?>
+<?php elseif (!$params->get('hidetitle')): ?>
 <h2><?php echo $params->get('title') ? $params->get('title') : $article->title; ?></h2>
 <?php endif; ?>
 <?php echo $article->introtext; ?>

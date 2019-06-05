@@ -61,6 +61,14 @@
 					default="0"
 					value="1"
 				/>
+                <field
+					name="hidetitle"
+					type="checkbox"
+					label="MOD_LOADARTICLE_HIDETITLE_LABEL"
+					description="MOD_LOADARTICLE_HIDETITLE_DESC"
+					default="0"
+					value="1"
+				/>
 			</fieldset>
 		</fields>
 	</config>
