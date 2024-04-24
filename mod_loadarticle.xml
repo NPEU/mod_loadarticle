@@ -1,76 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" client="site" version="3.2.0" method="upgrade">
+<extension type="module" client="site" method="upgrade">
 
     <name>MOD_LOADARTICLE</name>
     <author>Andy Kirk</author>
     <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
     <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
-    <creationDate>January 2019</creationDate>
-    <copyright>(C) NPEU 2019</copyright>
+    <creationDate>April 2024</creationDate>
+    <copyright>(C) NPEU 2024</copyright>
     <license>MIT License; see LICENSE.md</license>
 
     <!--  The version string is recorded in the components table -->
-    <version>1.2.1</version>
+    <version>2.0.0</version>
     <!-- The description is optional and defaults to the name -->
     <description>MOD_LOADARTICLE_XML_DESCRIPTION</description>
 
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
-        <server type="extension" name="NPEU: mod_loadarticle Update Site">https://raw.githubusercontent.com/NPEU/mod_loadarticle/master/update-manifest.xml</server>
+        <server type="extension" name="NPEU: mod_loadarticle Update Site">https://raw.githubusercontent.com/NPEU/mod_loadarticle/main/update-manifest.xml</server>
     </updateservers>
 
+    <namespace path="src">NPEU\Module\Loadarticle</namespace>
+
     <files>
-        <filename module="mod_loadarticle">mod_loadarticle.php</filename>
-        <filename>helper.php</filename>
-        <filename>index.html</filename>
+        <filename module="mod_loadarticle">services</filename>
         <folder>language</folder>
+        <folder>src</folder>
         <folder>tmpl</folder>
     </files>
 
     <config>
-		<fields name="params">
-			<fieldset name="basic">
-				<field
-					name="alias"
-					type="text"
-					label="MOD_LOADARTICLE_ALIAS_LABEL"
-					description="MOD_LOADARTICLE_ALIAS_DESC"
-					default=""
-					required="true"
-				/>
-				<field
-					name="path"
-					type="text"
-					label="MOD_LOADARTICLE_PATH_LABEL"
-					description="MOD_LOADARTICLE_PATH_DESC"
-					default=""
-					required="true"
-				/>
-				<field
-					name="title"
-					type="text"
-					label="MOD_LOADARTICLE_TITLE_LABEL"
-					description="MOD_LOADARTICLE_TITLE_DESC"
-					default=""
-				/>
-				<field
-					name="pagetitle"
-					type="checkbox"
-					label="MOD_LOADARTICLE_PAGETITLE_LABEL"
-					description="MOD_LOADARTICLE_PAGETITLE_DESC"
-					default="0"
-					value="1"
-				/>
+        <fields name="params">
+            <fieldset name="basic">
                 <field
-					name="hidetitle"
-					type="checkbox"
-					label="MOD_LOADARTICLE_HIDETITLE_LABEL"
-					description="MOD_LOADARTICLE_HIDETITLE_DESC"
-					default="0"
-					value="1"
-				/>
-			</fieldset>
-		</fields>
-	</config>
+                    name="alias"
+                    type="text"
+                    label="MOD_LOADARTICLE_ALIAS_LABEL"
+                    description="MOD_LOADARTICLE_ALIAS_DESC"
+                    default=""
+                    required="true"
+                />
+                <field
+                    name="path"
+                    type="text"
+                    label="MOD_LOADARTICLE_PATH_LABEL"
+                    description="MOD_LOADARTICLE_PATH_DESC"
+                    default=""
+                    required="true"
+                />
+                <field
+                    name="title"
+                    type="text"
+                    label="MOD_LOADARTICLE_TITLE_LABEL"
+                    description="MOD_LOADARTICLE_TITLE_DESC"
+                    default=""
+                />
+                <field
+                    name="pagetitle"
+                    type="checkbox"
+                    label="MOD_LOADARTICLE_PAGETITLE_LABEL"
+                    description="MOD_LOADARTICLE_PAGETITLE_DESC"
+                    default="0"
+                    value="1"
+                />
+                <field
+                    name="hidetitle"
+                    type="checkbox"
+                    label="MOD_LOADARTICLE_HIDETITLE_LABEL"
+                    description="MOD_LOADARTICLE_HIDETITLE_DESC"
+                    default="0"
+                    value="1"
+                />
+            </fieldset>
+        </fields>
+    </config>
 
 </extension>
