@@ -30,7 +30,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
 
         $data['article'] = $this->getHelperFactory()
             ->getHelper('LoadarticleHelper')
-            ->getArticle($data['params'], $this->getApplication());
+            ->getArticle($params, $this->getApplication());
 
         return $data;
     }
