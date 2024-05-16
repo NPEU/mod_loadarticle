@@ -3,14 +3,16 @@
  * @package     Joomla.Site
  * @subpackage  mod_loadarticle
  *
- * @copyright   Copyright (C) NPEU 2019.
+ * @copyright   Copyright (C) NPEU 2024.
  * @license     MIT License; see LICENSE.md
  */
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
 
-$doc = JFactory::getDocument();
+$doc = Factory::getDocument();
 
 ?>
 <article>
@@ -22,7 +24,7 @@ $doc = JFactory::getDocument();
 <?php echo $article->introtext; ?>
 <?php if ($article->fulltext != null): ?>
 <p class="readmore">
-<a href="<?php echo $article->alias; ?>"><?php echo JText::_('COM_CONTENT_READ_MORE'); ?></a>
+<a href="<?php echo $article->alias; ?>"><?php echo Text::_('COM_CONTENT_READ_MORE'); ?></a>
 </p>
 <?php endif; ?>
 </article>
